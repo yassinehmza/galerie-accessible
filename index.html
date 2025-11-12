@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie de photos interactive et accessible</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Appel de la fonction addTabFocus() au chargement de la page -->
+<body onload="addTabFocus()">
+
+  <header>
+    <h1>Galerie de photos interactive et accessible</h1>
+    <p>Survolez ou naviguez avec la touche Tabulation pour voir les images ci-dessous.</p>
+  </header>
+
+  <!-- Zone principale d’affichage -->
+  <div id="image" role="region" aria-live="polite">
+    Survolez ou sélectionnez une image pour l’afficher ici
+  </div>
+
+  <!-- Galerie d’images -->
+  <section id="gallery">
+    <figure class="preview" 
+            alt="Montagnes enneigées majestueuses" 
+            onmouseover="upDate(this)" 
+            onmouseleave="unDo()" 
+            onfocus="upDate(this)" 
+            onblur="unDo()">
+      <img src="https://via.placeholder.com/150/0000FF" alt="Montagnes enneigées majestueuses">
+    </figure>
+
+    <figure class="preview"
+            alt="Soleil couchant sur la mer"
+            onmouseover="upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+      <img src="https://via.placeholder.com/150/FF0000" alt="Soleil couchant sur la mer">
+    </figure>
+
+    <figure class="preview"
+            alt="Forêt verdoyante en été"
+            onmouseover="upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+      <img src="https://via.placeholder.com/150/00FF00" alt="Forêt verdoyante en été">
+    </figure>
+
+    <figure class="preview"
+            alt="Ville illuminée la nuit"
+            onmouseover="upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+      <img src="https://via.placeholder.com/150/FFFF00" alt="Ville illuminée la nuit">
+    </figure>
+
+    <figure class="preview"
+            alt="Désert doré au coucher du soleil"
+            onmouseover="upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+      <img src="https://via.placeholder.com/150/FFA500" alt="Désert doré au coucher du soleil">
+    </figure>
+
+    <figure class="preview"
+            alt="Cascade dans la montagne"
+            onmouseover="upDate(this)"
+            onmouseleave="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+      <img src="https://via.placeholder.com/150/008080" alt="Cascade dans la montagne">
+    </figure>
+  </section>
+
+  <footer>
+    <p>Projet final - JavaScript DOM et accessibilité</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
